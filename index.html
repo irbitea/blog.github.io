@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>ai20033</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <script src="script.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#nav" data-offset="0" onload="DOM()">
+
+  <header id="home" class="bg-image-full" style="background-image: url('img/food.jpg');">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light smart-scroll mobile">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#home">Food Blog</a>
+        <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#recipes">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#post">Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+
+        </ul>
+        <button id="sign-btn" data-keyboard="false" class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal"
+          data-target="#signup-modal">Sign up</button>
+      </div>
+    </nav>
+  </header>
+  <a id="button"></a>
+
+  <div class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-4">Welcome to my food blog!</h1>
+      <div class="text-justify">
+        <p>
+          Hello and welcome to my personal food blog. <b>Here you will find:</b>
+        </p>
+        <ul id="list">
+          <li>Recipes for meat-eaters, vegetarians and vegans,</li>
+          <li>Healthy lunch and dinner recipes,</li>
+          <li>Tasty and easy to make desserts,</li>
+          <li>Tips & tricks for cooking and baking.</li>
+        </ul>
+        <p>
+          If you want to leave a comment on a recipe or send me a message, consider signing up (it'll only take a few
+          minutes). <b>Only registered users</b> are able to access all of the features and special offers.
+          Also, if you sign up, you'll be able to recieve my monthly newsletter, where I'll share my monthly favourites,
+          share exclusive recipes and more!<br>
+          Continue scrolling to see all of my recipes. I've included different recipes that are easy to make and will be
+          loved by everyone. If you want to know more about me, be sure to check out the <i>about</i> section.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-image-full" style="background-image: url('img/food2.jpg');"></div>
+
+  <section class="py-5" id="recipes">
+    <h2 class="text-center">All Recipes</h2>
+    <div class="container">
+
+      <div id="filter-buttons" class="d-flex justify-content-center row mb-4">
+        <button class="btn btn-dark mx-2 mt-2 filter-button" data-filter="all">All</button>
+        <button class="btn btn-dark mx-2 mt-2 filter-button" data-filter="soup">Soups</button>
+        <button class="btn btn-dark mx-2 mt-2 filter-button" data-filter="salad">Salads</button>
+        <button class="btn btn-dark mx-2 mt-2 filter-button" data-filter="pasta">Pasta</button>
+        <button class="btn btn-dark mx-2 mt-2 filter-button" data-filter="dessert">Desserts</button>
+        <button class="btn btn-dark mx-2 mt-2 filter-button" data-filter="pizza">Pizzas</button>
+        <button class="btn btn-dark mx-2 mt-2 filter-button" data-filter="burger">Burgers</button>
+      </div>
+
+      <!-- Row-->
+      <div class="row text-center">
+
+
+        <div class="col-lg-3 col-md-6 mb-4 filter dessert">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/72/96/cupcakes_dessert_frosting_food_cake_sweet_party_birthday-893389.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Chocolate cupcakes</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter salad">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/bc/5c/salad_fresh_veggies_vegetables_healthy_diet_food_green-722087.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Veggie salad</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter salad">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/ad/a1/spinach_chicken_pomegranate_salad_green_leaves_leaf_fruit-722652.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Pomegranate salad</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter salad">
+          <div class="card">
+            <img class="card-img-top" src="https://c.pxhere.com/images/92/9f/fed6c5f77be20df17ac5c817b90a-1439137.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Avocado salad</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter burger">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/be/e6/burger_bun_cheeseburger_hamburger_food-125013.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Chicken burger</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter dessert">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/09/b4/chocolate_chip_cookie_chocolate_food_orange_zest-51155.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Choc-chip cookies</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter pasta">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/ec/45/pasta_mushroom_food_dinner_italian_dish_meal_gourmet-807306.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Mushroom pasta</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter dessert">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/36/a4/chocolate_brownies_brownies_cake_food_dessert_snack_delicious_treat-899971.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Walnut brownies</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter soup">
+          <div class="card">
+            <img class="card-img-top" src="https://c.pxhere.com/images/4b/4b/4b4d3ea1f66e6f8384ac59a1b5e2-1594930.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Pork soup</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter pasta">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/bd/0d/food_spanish_baked_eggs_spanish_egg-889312.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Lasagna</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter soup">
+          <div class="card">
+            <img class="card-img-top" src="https://c.pxhere.com/photos/4f/c2/food_pepper_stew_soup_meal-35530.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Spicy veggie soup</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter pizza">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/8f/52/pizza_food_cheese_pepperoni_italian-41138.jpg!s"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Pizza with olives</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 filter pasta">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/6a/fa/spaghetti_drunken_line_food_pasta_italian_food_seafood-855088.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Shrimp pasta</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter pizza">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/d4/85/pizza_garlic_cutting_board_pizza_cutter_wooden_cutting_wood_parmesan_cheese-608900.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Vegetarian pizza</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter burger">
+          <div class="card">
+            <img class="card-img-top"
+              src="https://c.pxhere.com/photos/34/d0/sandwich_vegetarian_sandwich_vegetarian_food_light_healthy_bread_soya-674208.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Vegan bean burgers</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 filter soup">
+          <div class="card">
+            <img class="card-img-top" src="https://c.pxhere.com/images/69/eb/10839c74515ff4a538c07a0c8c2d-1443405.jpg!d"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Broccoli soup</h5>
+              <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/" target="_blank"
+                class="btn btn-outline-dark">Get recipe</a><br>
+            </div>
+          </div>
+        </div>
+        <!-- Container-->
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-image-full" style="background-image: url('img/food3.jpg');"></div>
+  <section class="py-5" id="post">
+    <div class="container">
+      <h2 class="text-center">Posts</h2>
+      <div class="d-flex justify-content-center">
+        <div class="row mr-2 ml-2">
+          <div class="card mb-3">
+            <img class="card-img-top images "
+              src="https://images.pexels.com/photos/4199098/pexels-photo-4199098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="Card image cap">
+            <div class="card-body">
+              <a class="post-link"
+                href="https://www.unlockfood.ca/en/Articles/Cooking-Food-Preparation/How-to-cook-with-Spices.aspx"
+                target="_blank">
+                <h5 class="card-title post-title"><u>All about spices</u></h5>
+              </a>
+              <p class="card-text">Nullam sit amet gravida mi. Cras vel pulvinar neque, ac porttitor velit. Nam sed
+                dolor auctor, pellentesque tortor non, varius sem.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <img class="card-img-top images "
+              src="https://images.pexels.com/photos/2014693/pexels-photo-2014693.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="Card image cap">
+            <div class="card-body">
+              <a class="post-link" href="https://www.thespruceeats.com/tips-for-perfect-macarons-435128" target="_blank">
+                <h5 class="card-title post-title"><u>Making the perfect macarons</u></h5>
+              </a>
+              <p class="card-text">Nullam sit amet gravida mi. Cras vel pulvinar neque, ac porttitor velit. Nam sed
+                dolor auctor, pellentesque tortor non, varius sem..</p>
+              <p class="card-text"><small class="text-muted">Last updated 1 week ago</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="row mr-2 ml-2">
+          <div class="card mb-3">
+            <img class="card-img-top images "
+              src="https://images.pexels.com/photos/1756061/pexels-photo-1756061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="Card image cap">
+            <div class="card-body">
+              <a class="post-link" href="https://sallysbakingaddiction.com/homemade-artisan-bread/" target="_blank">
+                <h5 class="card-title post-title"><u>Bread baking secrets</u></h5>
+              </a>
+              <p class="card-text">Nullam sit amet gravida mi. Cras vel pulvinar neque, ac porttitor velit. Nam sed
+                dolor auctor, pellentesque tortor non, varius sem.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 days ago</small></p>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <img class="card-img-top images"
+              src="https://images.pexels.com/photos/3756498/pexels-photo-3756498.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="Card image cap">
+            <div class="card-body">
+              <a class="post-link" href="https://www.lifeasastrawberry.com/how-to-make-a-cheese-plate/" target="_blank">
+                <h5 class="card-title post-title"><u>Cheese plate at home</u></h5>
+              </a>
+              <p class="card-text">Nullam sit amet gravida mi. Cras vel pulvinar neque, ac porttitor velit. Nam sed
+                dolor auctor, pellentesque tortor non, varius sem.</p>
+              <p class="card-text"><small class="text-muted">Last updated 2 weeks ago</small></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-image-full" style="background-image: url('img/food4.jpg');"></div>
+
+  <section class="py-5" id="about">
+    <div class="container">
+      <h2 class="text-center">About my blog</h2>
+      <div class="text-justify">
+        <p>
+          <b>Lorem ipsum dolor sit amet,</b> consectetur adipiscing elit. Vivamus sit amet vehicula diam. Morbi sagittis
+          mi eget lorem auctor, eu elementum turpis ultricies.
+          Suspendisse potenti. Phasellus fringilla ligula nulla, vel semper est eleifend nec. Nulla eu urna in mauris
+          aliquam placerat. Sed rutrum cursus mi eu varius.
+          Curabitur sollicitudin ultricies sem, non condimentum mi condimentum vitae. <i>Pellentesque neque elit</i>,
+          ultricies ut augue non, pharetra eleifend arcu.
+          Nam mattis risus massa, eget finibus augue iaculis vel. <br>
+          Maecenas dolor odio, mattis nec varius eu, tempus et dui. Duis turpis ipsum, pretium at nunc eu, dignissim
+          facilisis nulla. Donec gravida, sapien vel
+          porttitor molestie, arcu diam blandit sem, eget dictum arcu velit nec nulla. Nam nunc nunc, sagittis iaculis
+          suscipit non, lobortis eget ipsum.
+          Nullam ut viverra diam, sed vehicula lectus. Fusce lobortis massa eu nisi feugiat vehicula.
+        </p>
+        <div id="about-text">
+
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+          lorem egestas vitae scel
+          <span id="dots">...</span><span id="more">
+            erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+            luctus vestibulum augue ut aliquet.
+            Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+            ornare turpis. Donec vitae dui eget
+            tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
+            porta.</span>
+        </p>
+        <button id="myBtn" class="btn btn-outline-dark my-2 my-sm-0" onclick="show()" type="button">Read more</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container flex-column d-flex align-items-center">
+      <div id="footer-text" class="pt-2">
+        <p id="autors" class="mt-5">Author: Annemarija Irbīte, ai20033</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-uppercase" id="exampleModalLabel">Sign up page</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Sign up to:</p>
+          <ol>
+            <li>Recieve my monthly newsletter.</li>
+            <li>Be able to leave comment on my recipes and blog entries.</li>
+            <li>Get notifications every time I post something new.</li>
+          </ol>
+          <hr>
+          <form id="forma" action="https://www.w3schools.com/action_page.php" onsubmit="return validateForm()"
+            onclick="validateDate()">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <div>
+              <label for="lname">Birthday</label><br>
+              <input id="day" class="birthday" type="text" name="day" placeholder="Day">
+              <input id="month" class="birthday" type="text" name="month" placeholder="Month">
+              <input id="year" class="birthday" type="text"  name="year" placeholder="Year">
+              <p id="day-text"></p>
+              <p id="month-text"></p>
+              <p id="year-text"></p>
+            </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com">
+            <label>Password :</label>
+            <input name="password" id="password" type="password" minlength="8" onkeyup='check();' />
+            <label>Confirm password:</label>
+            <input type="password" name="confirm_password" id="confirm_password" onkeyup='check();' />
+            <span id='message'></span><br><br>
+            <input id="submit-btn" type="submit" value="Submit">
+            <p>Already have an account? <a href="#">Sign in</a></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
